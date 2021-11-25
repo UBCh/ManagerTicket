@@ -34,4 +34,3 @@ class ManagerRepositoryTicketTest {
         Ticket[] actual= manager.searcyBy("DME");
         assertArrayEquals(expected, actual); }
     }
-}

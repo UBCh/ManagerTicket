@@ -2,7 +2,7 @@ package ru.netologi.repository;
 import  ru.netologi.domain.Ticket;
 
 public class RepositoryTicket {
-    public Ticket [] ticket =new Ticket[];
+    public Ticket [] ticket =new Ticket[0];
 
     public void save(Ticket ticket) {
         int length = this.ticket.length + 1;
