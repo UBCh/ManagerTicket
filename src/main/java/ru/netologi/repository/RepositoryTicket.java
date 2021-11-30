@@ -1,7 +1,7 @@
 package ru.netologi.repository;
 import  ru.netologi.domain.Ticket;
 
-public class RepositoryTicket {
+public class RepositoryTicket  {
     public Ticket [] ticket =new Ticket[0];
 
     public void save(Ticket ticket) {
@@ -14,8 +14,8 @@ public class RepositoryTicket {
     }
 
     public Ticket[] findAll(String departureIATA, String arrivalIATA ) {
-        final Ticket[] ticket = this.ticket;
-        return ticket;
+         Ticket[] ticket = this.ticket.compareTo();;
+           return ticket;
     }
 
     public boolean findById(int id) {
@@ -37,7 +37,6 @@ public class RepositoryTicket {
         }
         ticket = tmp;
     }
-
 
 
 }

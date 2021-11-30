@@ -1,6 +1,8 @@
 package ru.netologi.domain;
 
-public class Ticket implements Comparable<Ticket> {
+import ru.netologi.repository.RepositoryTicket;
+
+public class Ticket implements Comparable <Ticket> {
 
     private  int id;
     private int price;
@@ -21,11 +23,14 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int compareTo(Ticket o) {
-        int result = compareTo(Ticket o)-price;
+        int result = price.compareTo(o.price)-price;
         if (result >1){ return +1;};
         if (result < 1){ return -1;}
         return 0;
     }
+
+}
+
 
     public int getId() {
         return id;
@@ -66,4 +71,6 @@ public class Ticket implements Comparable<Ticket> {
     public void setTravelTime(int travelTime) {
         this.travelTime = travelTime;
     }
+
+
 }
