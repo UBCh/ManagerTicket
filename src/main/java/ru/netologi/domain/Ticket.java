@@ -1,10 +1,8 @@
 package ru.netologi.domain;
 
-import ru.netologi.repository.RepositoryTicket;
+public class Ticket implements Comparable<Ticket> {
 
-public class Ticket implements Comparable <Ticket> {
-
-    private  int id;
+    private int id;
     private int price;
     private String departureIATA;
     private String arrivalIATA;
@@ -22,14 +20,9 @@ public class Ticket implements Comparable <Ticket> {
     }
 
     @Override
-    public int compareTo(Ticket o) {
-        int result = price.compareTo(o.price)-price;
-        if (result >1){ return +1;};
-        if (result < 1){ return -1;}
-        return 0;
+    public int compareTo(Ticket t) {
+        return this.price - t.price;
     }
-
-}
 
 
     public int getId() {
